@@ -1,0 +1,80 @@
+body{
+    margin:0;
+    background-color: rgb(64, 78, 64);
+}
+
+nav{
+    background-color: white;
+    border-bottom: 4px solid rgb(158, 157, 157);
+    padding: 12px;
+}
+.left-nav{
+    display: inline-block;
+}
+.home-banner i{
+    display: none; 
+}
+
+.left-nav div, .home-banner div{
+    display: inline-block;
+}
+
+.left-nav i, .home-banner i{
+    color: orangered;
+}
+
+h1,h2,h3,h4{
+    margin: 0px;
+    text-align: center; 
+    text-transform: uppercase;
+}
+.right-nav{
+    float: right;
+    text-align: center;
+}
+.right-nav i{
+    margin:10px;
+    color: rgb(172, 169, 169);
+}
+.right-nav i:hover{
+    color:lightblue;
+}
+
+.home-banner h1{
+    color:greenyellow;
+}
+
+.home-banner h2{
+    color: white;
+}
+
+.home-banner{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom:50px;
+}
+
+.parrafo{
+    background-color: rgb(248, 171, 27);
+    color:white; 
+    padding:15px;
+    width: 90%;
+    border-radius: 2px;
+}
+.centrado{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*
+    SCREEN SIZE 420px (MOBILE)
+*/
+@media screen and (max-width:420px){
+
+    .left-nav{
+        display:none;
+    }
+    .home-banner i{
+        display: inline-block;
+    }
+}
