@@ -1,0 +1,23 @@
+.cuadro{
+    background-color: rgb(208, 211, 209);
+    border: black solid 1px;
+}
+
+.row div{
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.dotted {
+    border: lightgray dashed 1px;
+    height: 50vh;
+}
+.medio {
+    height: 50vh;
+}
+.uncuarto{
+    background-color: lightblue;
+    height: 25vh;
+}
