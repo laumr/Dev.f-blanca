@@ -1,0 +1,8 @@
+
+
+button:nth-child(odd){
+    background-color: green;
+}
+button:nth-child(even){
+    background-color: orange;
+}
