@@ -1,0 +1,78 @@
+
+body{
+    background-color: rgb(255, 196, 0);
+    padding-top: 15vh;
+}
+.calculadora{
+    width: 300px;
+    background-color: rgb(223, 221, 221);
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contPantalla{
+    /*height:70px;
+    width: 100%;*/
+    background-color: grey;
+    padding: 16px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.container {
+    padding: 16px;
+}
+
+#laPantalla{
+    background-color: rgb(210, 240, 161);
+    width: 100%;
+    height: 60px;
+    margin:0px;
+    border-radius: 5px;
+    text-align: right;
+    padding: 4px;
+    font-size: 40px;
+    color: rgb(63, 63, 63);
+}
+
+.no-padding{
+    padding: 0px;
+}
+
+.row{
+    margin:0px;
+}
+
+.col, .col-8{
+    padding: 5px;
+}
+
+
+button{
+    height:45px;
+    width: 100%;
+}
+
+button.altcomp{
+    height: 100%;
+    background-color: orange;
+    border-color: orange;
+}
+
+button.numero{
+    background-color: rgb(139, 140, 145);
+    border-color:  rgb(139, 140, 145);
+}
+
+button.numero:hover{
+    background-color: rgb(124, 125, 131);
+    border-color: rgb(124, 125, 131);
+}
+
+button.altcomp:hover {
+    background-color: rgb(247, 144, 27);
+    border-color:  rgb(247, 144, 27);
+}
+
+
+
