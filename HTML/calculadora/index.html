@@ -20,13 +20,13 @@
                     <button class="btn btn-secondary operacion" onclick="borrar()">C</button>
                 </div>
                 <div class="col">
-                    <button class="btn btn-secondary operacion">√</button>
+                    <button class="btn btn-secondary operacion" onclick="raizC()">√</button>
                 </div>
                 <div class="col">
-                    <button class="btn btn-secondary operacion">+</button>
+                    <button class="btn btn-secondary operacion" onclick="guardar('/')">/</button>
                 </div>
                 <div class="col">
-                    <button class="btn btn-secondary operacion">X</button>
+                    <button class="btn btn-secondary operacion" onclick="guardar('x')">X</button>
                 </div>
             </div>
             <div class="row">
@@ -40,7 +40,7 @@
                     <button class="btn btn-secondary numero" onclick="agregarApantalla(9)">9</button>
                 </div>
                 <div class="col">
-                    <button class="btn btn-secondary">-</button>
+                    <button class="btn btn-secondary" onclick="guardar('-')">-</button>
                 </div>
             </div>
             <div class="row">
@@ -54,7 +54,7 @@
                     <button class="btn btn-secondary numero" onclick="agregarApantalla(6)">6</button>
                 </div>
                 <div class="col">
-                    <button class="btn btn-secondary operacion" >+</button>
+                    <button class="btn btn-secondary operacion" onclick="guardar('+')">+</button>
                 </div>
             </div>
             <div class="row"><!--Esta es la fila de hasta abajo-->
@@ -80,7 +80,7 @@
                             </div>    
                         </div>
                         <div class="col">
-                            <button class="btn btn-secondary altcomp anaranjado">=</button>
+                            <button class="btn btn-secondary altcomp anaranjado" onclick="igualA()">=</button>
                         </div>
             </div>
         </div>

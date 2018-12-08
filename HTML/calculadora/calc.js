@@ -4,23 +4,67 @@
 */
 
 
+var primerNumero;
+var segundoNumero;
+var operacion;
+var valorActual
+
+
 function agregarApantalla(x){
-    var valoractual=document.getElementById('laPantalla').innerText; 
-    if(valoractual.length<10){
-    var impresion=document.getElementById('laPantalla');  
-    impresion.innerText=`${valoractual}${x}`;
+    valorActual=document.getElementById('laPantalla').innerText; 
+    if(valorActual.length<10){
+        var impresion=document.getElementById('laPantalla');  
+        impresion.innerText=`${valorActual}${x}`;
+    }
+    str.indexOf('.')
+}
+
+
+function guardar(signo){
+    primerNumero=document.getElementById('laPantalla').innerText;
+    operacion=signo
+    borrar();
+}
+
+function raizC(){
+    primerNumero=document.getElementById('laPantalla').innerText;
+    var resultado=raiz(Number(primerNumero));
+    redondear(resultado);
+    borrar();
+    agregarApantalla(resultado);
+}
+
+function igualA(){
+    segundoNumero=document.getElementById('laPantalla').innerText;
+    if(operacion=='+'){
+        var resultado=suma(Number(primerNumero),Number(segundoNumero));
+        borrar();
+        agregarApantalla(resultado);
+    }else{
+        if(operacion=='-'){
+            var resultado=resta(Number(primerNumero),Number(segundoNumero));
+            borrar();
+            agregarApantalla(resultado);
+        }else{
+            if(operacion=='x'){
+                var resultado=multiplicacion(Number(primerNumero),Number(segundoNumero));
+                borrar();
+                agregarApantalla(resultado);
+            }else{
+                if(operacion=='/'){
+                    var resultado=division(Number(primerNumero),Number(segundoNumero));
+                    borrar();
+                    agregarApantalla(resultado);
+                }    
+                
+            }
+        }
     }
 }
 
-function guardar(content){
-    var primernumero=getElementById('laPantalla').value;
-    console.log(primernumero);
-//aquí poner ifs depende de la operación, manda a la siguiente función y en esa función agarra este y el valor de la patalla.s
-}
-
 function borrar(){
-    var valoractual=document.getElementById('laPantalla');
-    valoractual.innerText='';
+    valorActual=document.getElementById('laPantalla');
+    valorActual.innerText='';
 }
 
 function suma(x,y){
@@ -39,4 +83,10 @@ function division(x,y){
     return x/y;
 }
 
-//Math.sqrt()
+function raiz(x){
+    return Math.sqrt(x);
+}
+
+function redondear(x){
+    return Math.round(x);
+}
