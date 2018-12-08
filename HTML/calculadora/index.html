@@ -11,13 +11,13 @@
 <body>
     <div class="calculadora">
         <div class="contPantalla">
-                <h3 id="laPantalla">0</h3>
+                <h3 id="laPantalla" ></h3>
         </div>       
 
         <div class="container calcdos">
             <div class="row">
                 <div class="col">
-                    <button class="btn btn-secondary operacion">C</button>
+                    <button class="btn btn-secondary operacion" onclick="borrar()">C</button>
                 </div>
                 <div class="col">
                     <button class="btn btn-secondary operacion">√</button>
@@ -75,7 +75,7 @@
                                     <button class="btn btn-secondary numero" onclick="agregarApantalla(0)">0</button>
                                 </div>
                                 <div class="col">
-                                    <button class="btn btn-secondary numero">.</button>
+                                    <button class="btn btn-secondary numero" onclick="agregarApantalla(`.`)">.</button>
                                 </div>
                             </div>    
                         </div>
