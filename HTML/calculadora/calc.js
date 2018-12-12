@@ -2,107 +2,89 @@
  * Esta práctica genera una calculadora simple
  * @author Laumr2991
 */
-/** Falta -  que el punto no me lo cuente, que acorte resultados a 12 en suma y multi dando el resultado correcto
- * 
+/** Falta -  que el punto no me lo cuente, que haga operaciones consecutivas,
+ * que acorte resultados a 12 en suma y resta y multiplicación dando el resultado correcto
  * */
 
-var primerNumero;
-var segundoNumero;
-var operacion;
-var valorActual;
-var resultado;
-var cuenta=0;
-
+var primerNumero="";
+var segundoNumero="";
+var operacion="";
+var operacionDos="";
+var resultado="";
+var valorActual=document.getElementById('laPantalla');
 
 
 function agregarApantalla(x){ 
-    var valorPantalla=document.getElementById('laPantalla').innerText;
-    if(valorPantalla=='0'|| cuenta==1){
+    if(valorActual.innerText=='0'|| segundoNumero!=""){
         borrar();
-        cuenta=0;
     }
-    valorActual=document.getElementById('laPantalla').innerText; 
-    if(valorActual.length<10){
-        var impresion=document.getElementById('laPantalla');  
-        impresion.innerText=`${valorActual}${x}`;
+    if(x=='.' & valorActual.innerText.indexOf('.')>=0){
+        return;
     }
-}
-
-function imprimirPunto(){
-    valorActual=document.getElementById('laPantalla').innerText; 
-    punto=valorActual.indexOf('.');
-    if(punto<0){
-        agregarApantalla('.');
+    if(valorActual.innerText.length<10){
+        valorActual.innerText=`${valorActual.innerText}${x}`;
     }
 }
 
 
 function guardar(signo){
-    primerNumero=document.getElementById('laPantalla').innerText;
-    operacion=signo
-    cuenta=1;
-}
-
-function resultadoCorto(){
-    resultado=resultado.toString()
-    if(resultado.length>12){
-        resultado=resultado.slice(0,11);
-        agregarApantalla(resultado);
-        cuenta=1;
-    }else{
-        agregarApantalla(resultado);
-        cuenta=1;
+    debugger;
+    if(primerNumero==""){
+        primerNumero=Number(valorActual.innerText);
+        borrar();
     }
+    if(operacion==""){
+        operacion=signo;
+    }else{
+        operacionDos=signo;
+        igualA();
+    }
+   
 }
 
 function raizC(){
-    primerNumero=document.getElementById('laPantalla').innerText;
-    resultado=raiz(Number(primerNumero));
+    resultado=raiz(Number(valorActual.innerText));
     borrar();
-    resultadoCorto();
+    agregarApantalla(resultado);
 }
 
 function igualA(){
-    segundoNumero=document.getElementById('laPantalla').innerText;
-    if(operacion=='+'){
-        resultado=suma(Number(primerNumero),Number(segundoNumero));
-        borrar();
-        agregarApantalla(resultado);
-        cuenta=1;
+    debugger;
+    segundoNumero=Number(valorActual.innerText);
+    if(operacion=='/'){
+        resultado=division(primerNumero,segundoNumero).toFixed(6);
     }else{
         if(operacion=='-'){
-            resultado=resta(Number(primerNumero),Number(segundoNumero));
-            borrar();
-            agregarApantalla(resultado);
-            cuenta=1;
+            resultado=resta(primerNumero,segundoNumero);
         }else{
             if(operacion=='x'){
-                resultado=multiplicacion(Number(primerNumero),Number(segundoNumero));
-                borrar();
-                agregarApantalla(resultado);
-                cuenta=1;
+                resultado=multiplicacion(primerNumero,segundoNumero);
             }else{
-                if(operacion=='/'){
-                    resultado=division(Number(primerNumero),Number(segundoNumero));
-                    borrar();
-                    resultadoCorto();
-                    cuenta=1;
+                if(operacion=='+'){
+                    resultado=suma(primerNumero,segundoNumero); 
                 }    
                 
             }
         }
+    
     }
+    borrar();
+    agregarApantalla(resultado);
+    primerNumero=resultado;
+    operacion=operacionDos;
 }
 
 function borrar(){
-    var valorPantalla=document.getElementById('laPantalla');
-    valorPantalla.innerText='';
+    valorActual.innerText='';
 }
 
 function borrarC(){
-    var valorPantalla=document.getElementById('laPantalla');
-    valorPantalla.innerText='0';
-    cuenta=0;
+    valorActual.innerText='0';
+    primerNumero="";
+    operacion="";
+    operacionDos="";
+    segundoNumero="";
+    resultado="";
 }
 
 function suma(x,y){
@@ -122,11 +104,6 @@ function division(x,y){
 }
 
 function raiz(x){
-    return Math.sqrt(x);
+    return Math.sqrt(x).toFixed(6);
 }
-
-function redondear(x){
-    return Math.round(x);
-}
-
 
