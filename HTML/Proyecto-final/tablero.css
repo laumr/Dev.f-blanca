@@ -1,0 +1,65 @@
+body{
+    background-color: rgb(44, 44, 66);
+    padding: 5vh 5vh 5vh 5vh;
+}
+head{
+    margin:20px;
+
+}
+
+button{
+    background-color:#5F5F5F;
+    width: 100%;
+    height:100%;
+    border:none;
+    border:solid rgb(252, 226, 114) 1px;
+}
+#uno{
+    border-top-left-radius: 10px;
+}
+#cuatro{
+    border-top-right-radius: 10px;
+}
+#diez-siete{
+    border-bottom-left-radius: 10px;
+}
+#veinte{
+    border-bottom-right-radius: 10px;
+}
+#play{
+    color:white;
+    background-color: rgb(253, 197, 42);
+    width:20%;
+}
+h3,h4{
+    color:white;
+    margin-bottom: 15px;
+}
+#contador{
+    text-align: right;
+}
+#barra{
+    height: 15px;
+    border-radius:18px;
+    border: 1px solid rgb(128, 128, 128);
+    margin-bottom: 20px;
+}
+#tablero{
+    border: 4px solid rgb(92, 91, 91);
+    border-radius: 16px;
+    height: 50vh;
+    padding:0px;
+}
+.centrado{
+    margin-left:auto;
+    margin-right:auto;
+    width: 55vw;
+}
+.col{
+    padding: 0px;
+}
+.row{
+    margin:0px;
+    height:20%;
+}
+
