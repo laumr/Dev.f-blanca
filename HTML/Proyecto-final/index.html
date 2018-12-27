@@ -10,10 +10,12 @@
 </head>
 <body>
     <head>
-        <button id="play" onclick="botonRandom()">JUGAR</button>
+        <button id="play" class="btn btn-warning" onclick="inicio()">JUGAR</button>
+        <button id="revisar" class="btn btn-warning" onclick="corroborar()">Revisa</button>
+        <button id="borrar" class="btn btn-warning" onclick="borrartodo()">Clear</button>
     </head>
     <div id="contador" class="centrado">
-        <h4>0pts</h4>
+        <h4 id="puntaje">0pts</h4>
         <div id="barra" class="centrado">
             <div id="colorbarra"></div>
         </div>
@@ -21,76 +23,76 @@
     <div class="container centrado" id="tablero">
         <div class="row">
             <div class="col">
-                <button id="uno"></button>
+                <button id="uno" onclick="secuenciaUsuario('uno')"></button>
             </div>
             <div class="col">
-                <button id="dos"></button>
+                <button id="dos" onclick="secuenciaUsuario('dos')"></button>
             </div>
             <div class="col">
-                <button id="tres"></button>
+                <button id="tres" onclick="secuenciaUsuario('tres')"></button>
             </div>
             <div class="col">
-                <button id="cuatro"></button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <button id="cinco"></button>
-            </div>
-            <div class="col">
-                <button id="seis"></button>
-            </div>
-            <div class="col">
-                <button id="siete"></button>
-            </div>
-            <div class="col">
-                <button id="ocho"></button>
+                <button id="cuatro" onclick="secuenciaUsuario('cuatro')"></button>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <button id="nueve"></button>
+                <button id="cinco" onclick="secuenciaUsuario('cinco')"></button>
             </div>
             <div class="col">
-                <button id="diez"></button>
+                <button id="seis" onclick="secuenciaUsuario('seis')"></button>
             </div>
             <div class="col">
-                <button id="once"></button>
+                <button id="siete" onclick="secuenciaUsuario('siete')"></button>
             </div>
             <div class="col">
-                <button id="doce"></button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <button id="trece"></button>
-            </div>
-            <div class="col">
-                <button id="catorce"></button>
-            </div>
-            <div class="col">
-                <button id="quince"></button>
-            </div>
-            <div class="col">
-                <button id="diez-seis"></button>
+                <button id="ocho" onclick="secuenciaUsuario('ocho')"></button>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <button id="diez-siete"></button>
+                <button id="nueve" onclick="secuenciaUsuario('nueve')"></button>
             </div>
             <div class="col">
-                <button id="diez-ocho"></button>
+                <button id="diez" onclick="secuenciaUsuario('diez')"></button>
             </div>
             <div class="col">
-                <button id="diez-nueve"></button>
+                <button id="once" onclick="secuenciaUsuario('once')"></button>
             </div>
             <div class="col">
-                <button id="veinte"></button>
+                <button id="doce" onclick="secuenciaUsuario('doce')"></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button id="trece" onclick="secuenciaUsuario('trece')"></button>
+            </div>
+            <div class="col">
+                <button id="catorce" onclick="secuenciaUsuario('catorce')"></button>
+            </div>
+            <div class="col">
+                <button id="quince" onclick="secuenciaUsuario('quince')"></button>
+            </div>
+            <div class="col">
+                <button id="diez-seis" onclick="secuenciaUsuario('diez-seis')"></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button id="diez-siete" onclick="secuenciaUsuario('diez-siete')"></button>
+            </div>
+            <div class="col">
+                <button id="diez-ocho" onclick="secuenciaUsuario('diez-ocho')"></button>
+            </div>
+            <div class="col">
+                <button id="diez-nueve" onclick="secuenciaUsuario('diez-nueve')"></button>
+            </div>
+            <div class="col">
+                <button id="veinte" onclick="secuenciaUsuario('veinte')"></button>
             </div>
         </div>
     </div>
     
-    <script src="tablero.js"></script>
+    <script src="tablero2.js"></script>
 </body>
 </html>
